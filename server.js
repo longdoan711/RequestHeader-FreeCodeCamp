@@ -16,7 +16,6 @@ app.get('/', function(req, res) {
 	console.log('ip', ip);
 	var language = req.headers['accept-language'].slice(0,5);
 	var sys = req.headers['user-agent'];
-	ip = ip.match(/.*:(.*?)$/)[1];
 	sys = sys.match(/\((.*?)\)/)[1];
 	res.render('index', {
 		ip: ip,
