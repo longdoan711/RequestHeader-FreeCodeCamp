@@ -6,7 +6,7 @@ var port = process.env.PORT || 3000;
 app.set('views', path.join(__dirname, 'public/templates'));
 app.set('view engine', 'jade');
 app.get('/', function(req, res) {
-	var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
+	var ip = req.connection.remoteAddress; console.log('ip', ip);
 	var language = req.headers['accept-language'].slice(0,5);
 	var sys = req.headers['user-agent'];
 	ip = ip.match(/.*:(.*?)$/)[1];
