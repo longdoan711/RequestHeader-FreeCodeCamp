@@ -1,0 +1,12 @@
+{
+	"name": "requestheader-microservice",
+	"description": "Freecodecamp project",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.14.0",
+		"jade": "^1.11.0"
+	}
+}
