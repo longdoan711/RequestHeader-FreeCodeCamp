@@ -24,6 +24,5 @@ app.get('/', function(req, res) {
 	});
 });
 
-app.use(express.static('public'));
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname,'public')));
 app.listen(port);
